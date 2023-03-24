@@ -1,0 +1,215 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+body{
+    background-color: #1985A1;
+    overflow-x: hidden;
+}
+#topbar{
+    background-color: #4C5C68;
+    width: 100vw;
+    height: 50px;
+
+
+
+}
+
+
+.bilder{
+    width: 450px;
+    height: 300px;
+
+}
+#sidebar{
+    background-color: #4C5C68;
+    width: 100px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow-x: hidden;
+    padding-top: 20px;
+
+}
+#sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    }
+#sidebar a:hover {
+    color: #f1f1f1;
+}
+*{
+    margin: 0;
+}
+
+.logout{
+    position:absolute; top:13px; right:10px;
+}
+.user{
+    font-size: large;
+    position:absolute; top:13px; right:120px;
+}
+  
+
+@keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+
+  .gallery {
+    animation-name: slide-in;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
+  
+.titt{
+  height: 20px;
+  width: 100px;
+  position: absolute;
+  top: 0px;
+  right: 250px;
+}
+.sub{
+  font-size: 12px;
+  height: 30px;
+  width: 100px;
+  position: absolute;
+  top: 0px;
+  right: 140px;
+}
+  
+.bilds{
+    border-color: #1985A1;
+    padding: 5px;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+.upload{
+    position: absolute;
+    top: 16px;
+    right: 600px;
+
+}
+.fa-solid{
+    position: absolute;
+    right: 400px;
+
+    background-color: #4C5C68;
+    font-size: 30px;
+}
+
+input{
+    text-align: center;
+}
+.gallery{
+    border-width: 10px;
+    border: #4C5C68;
+    padding: 10px;
+}
+.Title{
+    font-size: 25px;
+    text-align: center;
+}
+.knapp{
+    background-color: #050801;
+    color: #1985A1;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    /* margin: 4px 2px; */
+    margin-left: 9vw;
+    cursor: pointer;
+    border-radius: 12px;
+    text-align: center;
+}
+button:hover{
+    background: #03e9f4;
+    color: #050801;
+
+}
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -250px;
+  background-color: #3f3737;
+  overflow-x: hidden;
+  transition: 0.2s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #977a7a;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+}
+
+.main-content {
+	margin-left: 250px;
+	padding: 20px;
+	position: relative;
+}
+
+@media screen and (max-width: 600px) and (min-width: 300px) {
+    .bilder{
+        width: 150px;
+        height: 140px;
+    }
+    .knapp{
+        width: 90px;
+        height: 40px;
+        font-size: 10px;
+    }
+    .Title{
+        font-size: 15px;
+    }
+}

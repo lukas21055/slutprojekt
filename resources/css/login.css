@@ -1,0 +1,110 @@
+
+body{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url("/bilpldld.png");
+    height: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+}
+
+
+
+input{
+    text-align: center;
+}
+
+.bak{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+}
+.logi{
+    background-color: #4C5C68;
+    width: 500px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2vh;
+    border-radius: 28px;
+
+}
+#name{
+    width: 300px;
+    height: 35px;
+    border-radius: 10px;
+    font-size: large;
+    border-color: rgba(104, 85, 224, 1);
+}
+#pass{
+    width: 300px;
+    height: 35px;
+    border-radius: 10px;
+    font-size: large;
+    border-color: rgba(104, 85, 224, 1);
+}
+.log {
+    color: rgb(104, 85, 224);
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(104, 85, 224, 1);
+}
+button:hover {
+    color: white;
+    width:;
+    box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
+    background-color: rgba(104, 85, 224, 1);
+  }
+  
+  
+
+button {
+    cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 600;
+    margin: 0 10px;
+    width: 200px;
+    padding: 10px 0;
+    box-shadow: 0 0 20px rgba(65, 41, 221, 0.2);
+    transition: 0.4s;
+  }
+  p a {
+    color: black;
+    text-decoration: none;
+}
+  
+p {
+    position: relative;
+    top: 30px;
+}
+.container div > p span {
+    color: red;
+  }
+
+.container {
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+  }
+.men{
+    width: 300px;
+    height: 50px;
+    background-color: #1985A1;
+    border-radius: 10px;
+    position: relative;
+    right: -100px;
+}

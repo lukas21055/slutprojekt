@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/index.js" defer></script>
+    <link rel="stylesheet" href="css/inv.css">
+</head>
+<body>
+    <div id="topbar">
+        <h1>Profile</h1>
+    </div>
+    <div id="settings">
+        <h1>Settings</h1>
+        <a href="/logout">
+            <button class="logout">Logout</button>
+        </a>
+        <a href="/main">
+            <button class="main">Main</button>
+        </a>
+
+        <div id="inputs">
+            <h1>Edit Profile</h1> 
+            <form action="/edit" method="post">
+                <input type="text" name="username" id="" placeholder="New Username">
+                <br>
+                <input type="submit" value="SAVE">
+            </form
+        </div>
+        <form action="/change-password" method="post">
+            <label for="oldPassword">Old password:</label>
+            <input type="password" id="oldPassword" name="oldPassword">
+          
+            <label for="newPassword">New password:</label>
+            <input type="password" id="newPassword" name="newPassword">
+          
+            <button type="submit">Change password</button>
+          </form>
+          <form action="/delete">
+            <button>Delate Account!!!!</button>
+            
+          </form>
+    </div>
+    <div class="bild2">
+        <div class="bild">
+            <% listan.forEach(element => { %>
+              <form action="/remove/<%= element %>" method="post">
+                <img src="/emilbilds/<%= element %>" style="width: 15vw; height: 20vw;" alt="">
+                <input type="hidden" name="id" value="<%= element %>">
+                
+                <button class="knapp1">sell</button>
+              </form>
+            <% }) %>
+          </div>          
+    </div>
+    
+</body>
+</html>

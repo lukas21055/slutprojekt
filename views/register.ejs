@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="/js/register.js" defer></script>
+</head>
+<body>
+    <img class="bak" src="/bilpldld.png" alt="">
+    <div class="container">
+        <div class="login">
+            <div class="men">
+                <h1>Sign up</h1>
+            </div>
+            <% if (typeof error !== 'undefined') { %>
+              <p id="error-message"><%= error %></p>
+            <% } %>
+            <form action="/register" method="POST">
+                <div class="logi">
+                    <input type="text" id="name" name="username" placeholder="Username" required="required" oninput="clearErrorMessage()" />
+                    <input type="password" id="pass" name="password" placeholder="Password" required="required" />
+                    <button class="log">Sign up</button>
+                    <a href="/login">
+                        <button class="reg">login</button>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        function clearErrorMessage() {
+            const errorMessage = document.getElementById("error-message");
+            if (errorMessage) {
+                errorMessage.remove();
+            }
+        }
+    </script>
+</body>
+</html>

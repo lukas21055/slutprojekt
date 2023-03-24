@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/main.js" defer></script>
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
+    <script src="https://kit.fontawesome.com/6720fb8b4c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    
+</head>
+<body>
+    <div id="topbar">
+        
+        <h1 class="Logo">EmilSea</h1>
+        <div class="upload">
+            <form method="POST" action="/upload" enctype="multipart/form-data">
+                <div>
+                  <label for="myImage">
+                    <i class="fa-solid fa-upload"></i> 
+                  </label>
+                  <input type="file" name="myImage" id="myImage" style="display: none;">
+                </div>
+                <div>
+                  <input type="text" class="titt" name="title" id="title" placeholder="Title">
+                </div>
+                <button class="sub" type="submit">Upload Image</button>
+              </form>
+        </div>
+        <h1 class="user"><%= username %> </h1>
+        <form action="/logout" method="post">
+            <button class="logout">Logout</button>
+        </form>
+        
+        
+    </div>
+
+    <div id="mySidebar" class="sidebar">
+        <button class="openbtn" onclick="toggleNav()">☰</button>
+        <!-- <a href="#" class="closebtn" onclick="toggleNav()">×</a> -->
+        <a href="/inv"><span><i class="material-symbols-outlined">account_circle</i><span class="icon-text">Account</span></a><br>
+        <a href="/about"><i class="fa-solid fa-circle-info"></i>About</a>
+
+
+    </div>      
+    <div class="bilds">
+        <% for(im in image){ %>
+            <form action="/get_emil/<%= image[im].id %>/<%= image[im].image %>" method="post"> 
+                <div class="gallery">
+                    <img src="/emilbilds/<%= image[im].image %>" alt="pic1" class="bilder">
+                    <div class="Title"><%= image[im].des %></div>
+                    <button class="knapp">BUY!</button>
+                </div>
+                </form>
+            <% } %>
+
+            
+            
+
+    
+         
+</body>
+</html>
